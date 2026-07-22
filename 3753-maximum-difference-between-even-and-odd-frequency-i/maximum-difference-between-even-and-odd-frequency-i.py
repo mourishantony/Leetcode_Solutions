@@ -1,11 +1,11 @@
 class Solution:
     def maxDifference(self, s: str) -> int:
-        ans = dict(Counter(s))
-        odd =[]
-        even = []
-        for i in ans.keys():
-            if ans[i] % 2 == 0:
-                even.append(ans[i])
+        ans = Counter(s)
+        mx = 0
+        mn = float('inf')
+        for i in ans.values():
+            if i % 2 :
+                mx = max(i,mx)
             else:
-                odd.append(ans[i])
-        return max(odd) - min(even)
+                mn = min(i,mn)
+        return mx - mn
