@@ -71,23 +71,6 @@ This repository holds every problem I've solved on **LeetCode**, synced automati
 
 ---
 
-## 🗂️ Folder Structure
-
-```
-Leetcode_Solutions/
-├── Array/
-├── String/
-├── LinkedList/
-├── DynamicProgramming/
-├── Graph/
-├── Tree/
-└── README.md
-```
-
-*(LeetSync auto-organizes new solutions by topic/difficulty as you solve them.)*
-
----
-
 ## ⚙️ Powered By
 
 - 🔄 **[LeetSync](https://github.com/apps/leetsync)** — auto-commits accepted solutions from LeetCode to GitHub
