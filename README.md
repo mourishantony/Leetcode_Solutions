@@ -47,7 +47,6 @@ This repository holds every problem I've solved on **LeetCode**, synced automati
 ## 🐙 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mourishantony&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" height="165"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=mourishantony&theme=radical&hide_border=true" alt="GitHub Streak" height="165"/>
 </div>
 
