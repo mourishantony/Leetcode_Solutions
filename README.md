@@ -34,18 +34,10 @@ This repository holds every problem I've solved on **LeetCode**, synced automati
 
 ---
 
-## 📊 LeetCode Stats
+## 📊 LeetCode Stats & Submission Heatmap
 
 <div align="center">
   <img src="https://leetcard.jacoblin.cool/mourish_antony_c?theme=dark&font=baloo2&ext=heatmap" alt="LeetCode Stats Card with Heatmap" />
-</div>
-
----
-
-## 🔥 Submission Heatmap
-
-<div align="center">
-  <img src="https://leetcard.jacoblin.cool/mourish_antony_c?theme=dark&ext=heatmap&border=false" alt="LeetCode Heatmap" />
 </div>
 
 > The heatmap above updates automatically and reflects my real submission activity on LeetCode.
@@ -68,6 +60,23 @@ This repository holds every problem I've solved on **LeetCode**, synced automati
 </div>
 
 > ℹ️ To enable this animated snake graph, add the [`platane/snk`](https://github.com/Platane/snk) GitHub Action to your profile repo — it generates and updates this SVG automatically on a schedule.
+
+---
+
+## 🗂️ Folder Structure
+
+```
+Leetcode_Solutions/
+├── Array/
+├── String/
+├── LinkedList/
+├── DynamicProgramming/
+├── Graph/
+├── Tree/
+└── README.md
+```
+
+*(LeetSync auto-organizes new solutions by topic/difficulty as you solve them.)*
 
 ---
 
