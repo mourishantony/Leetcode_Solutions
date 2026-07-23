@@ -26,47 +26,47 @@ class Solution:
                     if nums[i] > nums[j]:
                         nums[i] , nums[j] = nums[j] , nums[i]
 
-        temp = [0] * len(nums)
+        def merge_sort(nums):
+            n = len(nums)
+            if n <2:
+                return nums
+            
+            m = n//2
+            L = nums[:m]
+            R = nums[m:]
 
-        def merge_sort(left, right):
-            if left >= right:
-                return
+            L = merge_sort(L)
+            R = merge_sort(R)
 
-            mid = (left + right) // 2
+            l,r = 0,0
+            L_len = len(L)
+            R_len = len(R)
 
-            merge_sort(left, mid)
-            merge_sort(mid + 1, right)
+            i = 0
+            sorted_arr = [0] *n
 
-            i = left
-            j = mid + 1
-            k = left
-
-            while i <= mid and j <= right:
-                if nums[i] <= nums[j]:
-                    temp[k] = nums[i]
-                    i += 1
+            while l < L_len and r < R_len:
+                if L[l] <= R[r]:
+                    sorted_arr[i] = L[l]
+                    l+=1
                 else:
-                    temp[k] = nums[j]
-                    j += 1
-                k += 1
+                    sorted_arr[i] = R[r]
+                    r+=1
+                i+=1
+            
+            while l < L_len:
+                sorted_arr[i] = L[l]
+                l+=1
+                i+=1
+            while r < R_len:
+                sorted_arr[i] = R[r]
+                r+=1
+                i+=1
 
-            while i <= mid:
-                temp[k] = nums[i]
-                i += 1
-                k += 1
-
-            while j <= right:
-                temp[k] = nums[j]
-                j += 1
-                k += 1
-
-            for i in range(left, right + 1):
-                nums[i] = temp[i]
-
-        merge_sort(0, len(nums) - 1)
+            return sorted_arr
 
         # bubble_sort(nums)
         # insertion_sort(nums)
         # selection_sort(nums)
     
-        return nums
+        return merge_sort(nums)
