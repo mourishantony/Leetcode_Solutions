@@ -56,27 +56,8 @@ This repository holds every problem I've solved on **LeetCode**, synced automati
 ## 📈 Contribution Snake
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/mourishantony/mourishantony/output/github-contribution-grid-snake.svg" alt="snake animation" />
+  <img src="https://github.com/mourishantony/mourishantony/blob/main/snake.svg" />
 </div>
-
-> ℹ️ To enable this animated snake graph, add the [`platane/snk`](https://github.com/Platane/snk) GitHub Action to your profile repo — it generates and updates this SVG automatically on a schedule.
-
----
-
-## 🗂️ Folder Structure
-
-```
-Leetcode_Solutions/
-├── Array/
-├── String/
-├── LinkedList/
-├── DynamicProgramming/
-├── Graph/
-├── Tree/
-└── README.md
-```
-
-*(LeetSync auto-organizes new solutions by topic/difficulty as you solve them.)*
 
 ---
 
