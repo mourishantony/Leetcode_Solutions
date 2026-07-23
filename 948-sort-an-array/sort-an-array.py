@@ -28,7 +28,7 @@ class Solution:
 
         def merge_sort(nums):
             n = len(nums)
-            if len(nums) == 0 or len(nums) == 1:
+            if n < 2:
                 return nums
             
             m = n//2
@@ -46,7 +46,7 @@ class Solution:
             sorted_arr = [0] *n
 
             while l < L_len and r < R_len:
-                if L[l] < R[r]:
+                if L[l] <= R[r]:
                     sorted_arr[i] = L[l]
                     l+=1
                 else:
