@@ -1,19 +1,15 @@
 class Solution:
     def vowelStrings(self, words: List[str], queries: List[List[int]]) -> List[int]:
         n = len(words)
-        vowel_lst = [0] *n
+        count = [0] *n
         vowel = "aeiou"
-        for i in range(n):
+        count[0] = 1 if words[0][0] in vowel and words[0][-1] in vowel else 0
+        for i in range(1,n):
             if words[i][0] in vowel and words[i][-1] in vowel:
-                vowel_lst[i] = 1
+                count[i] = 1 + count[i-1]
+            else:
+                count[i] = count[i-1]
         #[1,0,1,1,1]
-
-        count = [0] * n
-        count[0] = vowel_lst[0]
-
-        for i in range(1,len(vowel_lst)):
-            count[i] = count[i-1] + vowel_lst[i]
-
         ans = []
         for i in range(len(queries)):
             l = queries[i][0]
