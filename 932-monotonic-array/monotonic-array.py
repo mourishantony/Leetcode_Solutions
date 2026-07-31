@@ -1,12 +1,11 @@
 class Solution:
     def isMonotonic(self, nums: List[int]) -> bool:
         def inc(nums):
-            high = float(-inf)
+            high = -float(inf)
             for num in nums:
                 if num <high:
                     return False
-                else:
-                    high = num
+                high = num
             return True
         
         def dec(nums):
@@ -14,8 +13,7 @@ class Solution:
             for num in nums:
                 if num >low:
                     return False
-                else:
-                    low = num
+                low = num
             return True
         
         return inc(nums) or dec(nums)
