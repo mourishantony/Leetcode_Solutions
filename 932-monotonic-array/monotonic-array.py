@@ -1,3 +1,21 @@
 class Solution:
     def isMonotonic(self, nums: List[int]) -> bool:
-        return nums == sorted(nums) or nums == sorted(nums,reverse = True)
+        def inc(nums):
+            high = float(-inf)
+            for num in nums:
+                if num <high:
+                    return False
+                else:
+                    high = num
+            return True
+        
+        def dec(nums):
+            low = float(inf)
+            for num in nums:
+                if num >low:
+                    return False
+                else:
+                    low = num
+            return True
+        
+        return inc(nums) or dec(nums)
