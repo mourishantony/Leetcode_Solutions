@@ -1,15 +1,12 @@
 class Solution {
 public:
     bool divideArray(vector<int>& nums) {
-        unordered_set<int> ans;
-        for(int num : nums){
-            if(!ans.contains(num)){
-                ans.insert(num);
-            }
-            else{
-                ans.erase(num);
+        sort(nums.begin() , nums.end());
+        for(int i=0;i<nums.size();i+=2){
+            if(nums[i] != nums[i+1]){
+                return false;
             }
         }
-        return ans.size() == 0 ;
+        return true;
     }
 };
