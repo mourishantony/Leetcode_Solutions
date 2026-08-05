@@ -1,17 +1,12 @@
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
-        if(ransomNote.size() > magazine.size()){
-            return false;
-        }
-        unordered_map<char,int> ans;
-        for(char i : ransomNote) ans[i]++;
+        int alpha[26] = {0};
 
-        for(const auto& a:ans){
-            if(count(magazine.begin(),magazine.end(),a.first) < a.second){
-                return false;
-            }
-        }
+        for(char a : magazine) alpha[a - 'a']++;
+
+        for(char a:ransomNote) if(alpha[a-'a']-- <=0) return false;
+
         return true;
     }
 };
