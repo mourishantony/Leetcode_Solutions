@@ -4,11 +4,10 @@ class Solution:
             return False
         ans = {}
 
-        for a in magazine:
+        for a in ransomNote:
             ans[a] = ans.get(a,0) + 1
 
-        for a in ransomNote:
-            if ans.get(a,0) == 0:
+        for a in ans.keys():
+            if magazine.count(a) < ans[a]:
                 return False
-            ans[a]-=1
         return True
