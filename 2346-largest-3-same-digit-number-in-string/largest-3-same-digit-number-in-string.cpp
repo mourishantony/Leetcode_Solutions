@@ -1,21 +1,17 @@
 class Solution {
 public:
     string largestGoodInteger(string num) {
-        int ans = 0;
-        bool flag = false;
-        int a = 0,b = 1, c = 2;
-        while(c < num.size()){
-            if(num[a] == num[b] && num[a] == num[c]){
-                flag = true;
-                if(num[a] > ans) ans = num[a]; 
+        char ans = 0;
+
+        for (int i = 0; i + 2 < num.size(); i++) {
+            if (num[i] == num[i + 1] && num[i] == num[i + 2]) {
+                ans = max(ans, num[i]);
             }
-            a++;
-            b++;
-            c++;
         }
-        if(flag) 
-            return string(3,ans);
-        else 
+
+        if (ans == 0)
             return "";
+
+        return string(3, ans);
     }
 };
