@@ -5,16 +5,7 @@ class Solution:
         for path in paths:
             s[path[0]] = path[1]
 
-        p = []
-        for path in paths:
-            p.append(path[0])
-
-        flag = True
         ans = paths[0][0]
-        while flag:
-            if ans in p:
-                ans = s[ans]
-            else:
-                flag = False
-
+        while ans in s:
+            ans = s[ans]
         return ans
