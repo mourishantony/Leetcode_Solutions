@@ -3,8 +3,9 @@ class Solution:
         s = sentence.split()
         if s[0][0] != s[-1][-1]:
             return False
-
-        for i in range(len(s)-1):
+        i=0 
+        while i < len(s)-1:
             if s[i][-1] != s[i+1][0]:
                 return False
+            i+=1
         return True
