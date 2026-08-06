@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxProductDifference(vector<int>& nums) {
-        double max1 = -INFINITY , max2 = -INFINITY , min1 = INFINITY,min2 = INFINITY;
+        int max1 = 0 , max2 = 0 , min1 = 10001,min2 = 10001;
         for(int num:nums){
             if(num >= max1){
                 max2 = max1;
