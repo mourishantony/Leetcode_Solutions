@@ -1,6 +1,9 @@
 class Solution {
 public:
     bool makeEqual(vector<string>& words) {
+        if (words.size() == 1) {
+            return true;
+        }
         vector<int> store(26,0);
 
         for(string word:words){
