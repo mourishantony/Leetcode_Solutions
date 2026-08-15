@@ -1,21 +1,30 @@
 class Solution:
     def findErrorNums(self, nums: List[int]) -> List[int]:
-        nums.sort()
-        l, r = 0, 0
+        xor = 0
+        n = len(nums)
 
-        if nums[0] != 1:
-            r = 1
+        for i in range(1, n + 1):
+            xor ^= i
 
-        for i in range(1, len(nums)):
-            if nums[i] == nums[i - 1]:
-                l = nums[i]
-            elif nums[i] - 1 != nums[i - 1]:
-                r = nums[i] - 1
+        for num in nums:
+            xor ^= num
 
-            if l > 0 and r > 0:
-                break
+        bit = xor & -xor
 
-        if r == 0:
-            r = len(nums)
+        a = b = 0
 
-        return [l, r]
+        for i in range(1, n + 1):
+            if i & bit:
+                a ^= i
+            else:
+                b ^= i
+
+        for num in nums:
+            if num & bit:
+                a ^= num
+            else:
+                b ^= num
+
+        if a in nums:
+            return [a, b]
+        return [b, a]
