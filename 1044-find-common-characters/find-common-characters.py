@@ -4,7 +4,7 @@ class Solution:
         ans = list(a)
         for i in a:
             for j in range(1,len(words)):
-                if i not in set(words[j]):
+                if i not in words[j]:
                     ans.remove(i)
                     break
                 else:
