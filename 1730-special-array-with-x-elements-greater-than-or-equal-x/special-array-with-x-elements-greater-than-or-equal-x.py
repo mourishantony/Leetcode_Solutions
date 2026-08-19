@@ -1,5 +1,6 @@
 class Solution:
     def specialArray(self, nums: List[int]) -> int:
+        nums.sort()
         for x in range(1000):
             count = 0
             for num in nums:
