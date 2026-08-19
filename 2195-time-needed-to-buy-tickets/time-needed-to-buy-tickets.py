@@ -4,12 +4,12 @@ class Solution:
         T = tickets[k]
         for i,val in enumerate(tickets):
             if i<=k:
-                if val < tickets[k]:
+                if val < T:
                     sec+=val
                 else:
                     sec+=T
             else:
-                if val < tickets[k]:
+                if val < T:
                     sec+=val  
                 else:
                     sec+= T-1
