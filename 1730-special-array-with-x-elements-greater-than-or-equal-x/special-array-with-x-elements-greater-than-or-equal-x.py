@@ -1,12 +1,13 @@
 class Solution:
     def specialArray(self, nums: List[int]) -> int:
-        i=len(nums)
-        while(i>0):
+        for x in range(1000):
             count = 0
             for num in nums:
-                if num >= i:
+                if num >= x:
                     count+=1
-            if i == count:
-                return count
-            i-=1
-        return -1
+                if count > x:
+                    break
+            if count == x:
+                return x
+            if x>len(nums):
+                return -1
