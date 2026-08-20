@@ -5,7 +5,6 @@ class Solution:
         for i in range(len(names)):
             store[heights[i]] = names[i]
         heights.sort(reverse = True)
-        print(heights)
 
         for i in range(len(names)):
             ans.append(store[heights[i]])
