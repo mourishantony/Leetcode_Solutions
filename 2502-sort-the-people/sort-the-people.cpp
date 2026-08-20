@@ -1,11 +1,11 @@
 class Solution {
 public:
     vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
-        unordered_map<int,string> store;
-        for(int i=0;i<names.size();i++) store[heights[i]] = names[i];
-        sort(heights.rbegin(),heights.rend());
+        vector<pair<int,string>> store;
+        for(int i=0;i<names.size();i++) store.push_back({heights[i],names[i]});
+        sort(store.rbegin(),store.rend());
         vector<string> ans;
-        for(int i=0;i<names.size();i++) ans.push_back(store[heights[i]]);
+        for(int i=0;i<names.size();i++) ans.push_back(store[i].second);
         return ans;
     }
 };
