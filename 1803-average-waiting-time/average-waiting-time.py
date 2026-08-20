@@ -5,7 +5,7 @@ class Solution:
         pos = 0
         sec =0
         for i,j in customers:
-            if i < pos:
+            if i <= pos:
                 pos += j
             else:
                 pos = i + j
