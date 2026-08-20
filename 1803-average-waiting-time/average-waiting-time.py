@@ -4,10 +4,10 @@ class Solution:
         # sec = pos - customers[0][0]
         pos = 0
         sec =0
-        for i in range(len(customers)):
-            if customers[i][0] < pos:
-                pos += customers[i][1]
+        for i,j in customers:
+            if i < pos:
+                pos += j
             else:
-                pos = customers[i][0] + customers[i][1]
-            sec += pos - customers[i][0] 
+                pos = i + j
+            sec += pos - i
         return sec/len(customers)
