@@ -3,7 +3,7 @@ class Solution:
         if len(nums) ==1:
             return nums
         store = Counter(nums)
-        sorted_store = {k:v for k,v in sorted(store.items(),key = lambda item : item[1],reverse = True)}
+        sorted_store = {k:v for k,v in islice(sorted(store.items(),key = lambda item : item[1],reverse = True),k)}
         # print(sorted_store)
-        ans = list(sorted_store.keys())[:k]
+        ans = list(sorted_store.keys())
         return ans
