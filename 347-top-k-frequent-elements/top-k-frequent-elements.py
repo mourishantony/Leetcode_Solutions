@@ -4,5 +4,5 @@ class Solution:
             return nums
         store = Counter(nums)
         sorted_store = {k:v for k,v in islice(sorted(store.items(),key = lambda item : item[1],reverse = True),k)}
-        return list(sorted_store.keys())
-        
+        ans = list(sorted_store.keys())
+        return ans
