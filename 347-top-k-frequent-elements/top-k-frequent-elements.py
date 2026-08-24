@@ -3,6 +3,14 @@ class Solution:
         if len(nums) ==1:
             return nums
         store = Counter(nums)
-        sorted_store = {k:v for k,v in islice(sorted(store.items(),key = lambda item : item[1],reverse = True),k)}
-        ans = list(sorted_store.keys())
-        return ans
+        bucket = [[] for _ in range(len(nums)+1)]
+
+        for key , value in store.items():
+            bucket[value].append(key)
+        ans =[]
+        for key in range(len(nums),0,-1):
+            for num in bucket[key]:
+                ans.append(num)
+
+                if len(ans) == k:
+                    return ans
