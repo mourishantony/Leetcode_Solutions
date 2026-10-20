@@ -5,9 +5,8 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        
-        for i in range(1,len(nums)):
-            for j in range(i,len(nums)):
-
-                if nums[j] + nums[j-i] == target:
-                    return [j-i,j]
+        store ={}
+        for i,val in enumerate(nums):
+            if target - val in store:
+                return [store[target- val],i]
+            store[val] = i
