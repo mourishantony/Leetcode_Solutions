@@ -3,8 +3,8 @@ class Solution:
         prefix_sum={0:1}
         sum = 0
         count =0
-        for i in range(len(nums)):
-            sum+=nums[i]
+        for num in nums:
+            sum+=num
 
             if sum - k in prefix_sum:
                 count += prefix_sum[sum-k]
